@@ -1,0 +1,8 @@
+<h2>Photo list</h2>
+@for (photo of photoList; track photo.id) {
+<div>
+  <a [routerLink]="['/photos/', photo.id]">
+    <img [src]="photo.thumbnail" />
+  </a>
+</div>
+}
