@@ -2,7 +2,12 @@
 @for (photo of photoList; track photo.id) {
 <div>
   <a [routerLink]="['/photos/', photo.id]">
-    <img [src]="photo.thumbnail" />
+    <img
+      width="300"
+      height="200"
+      [src]="photo.thumbnail"
+      [style.viewTransitionName]="'photo-id-' + photo.id"
+    />
   </a>
 </div>
 }
